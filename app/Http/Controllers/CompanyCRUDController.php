@@ -86,12 +86,12 @@ class CompanyCRUDController extends Controller
 
         if ($dateFilter != null) {
 
-            $data['companies'] = Company::where('dateRecording', 'like', '%' . $dateFilter . '%')->orderBy('id', 'asc')->paginate(5);
+            $data['companies'] = Company::where('dateRecording', 'like', '%' . $dateFilter . '%')->orderBy('id', 'asc')->paginate(10);
             return view('companies.index', $data);
 
         }else if ($monthFilter != null) {
 
-            $data['companies'] = Company::where('dateRecording', 'like', '%' . $monthFilter . '%')->orderBy('id', 'asc')->paginate(5);
+            $data['companies'] = Company::where('dateRecording', 'like', '%' . $monthFilter . '%')->orderBy('id', 'asc')->paginate (10);
             return view('companies.index', $data);
 
         } else{

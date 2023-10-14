@@ -31,7 +31,7 @@
                     <th>CompanyPerformance</th>
                     <th>MediaConsume</th>
                     <th>Other</th>
-                    <th>Action</th>
+                    <th width = "150px">Action</th>
                 </tr>
                 @foreach($companies as $company)
                     <tr>
@@ -73,7 +73,7 @@
             <div>
                 <a href="{{ route('companies.create') }}" class="btn btn-success">+Create SurverFrom</a>
             </div>
-            {!! $companies->links('pagination::bootstrap-5') !!}
+            {!!$companies->links('pagination::bootstrap-5')!!}
         </div>
     </div>
 

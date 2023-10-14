@@ -43,7 +43,7 @@
                     <div class="col-md-12">
                         <div class="form-group my-3">
                             <strong>Name*</strong>
-                            <input type="text" name="name" class="form-control" placeholder="name" required>
+                            <input type="text" name="name" class="form-control" placeholder="name" value="{{$company->name}}">
                             @error('name')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -53,7 +53,7 @@
                     <div class="col-md-12">
                         <div class="form-group my-3">
                             <strong>Lastname*</strong>
-                            <input type="text" name="lastName" class="form-control" placeholder="lastName" required>
+                            <input type="text" name="lastName" class="form-control" placeholder="lastName" value="{{$company->lastName}}">
                             @error('lastName')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -63,7 +63,7 @@
                     <div class="col-md-12">
                         <div class="form-group my-3">
                             <strong>Email</strong>
-                            <input type="email" name="email" class="form-control" placeholder="email">
+                            <input type="email" name="email" class="form-control" placeholder="email" value="{{$company->email}}">
                             @error('email')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -104,16 +104,19 @@
 
                     <div class="col-md-12">
                         <div class="form-group my-3">
-                            <strong>Company Other</strong>
-                            <input type="text" name="Other" class="form-control" placeholder="Company Other">
+                            <strong>Other</strong>
+                            <input type="text" name="Other" class="form-control" placeholder="Company Other" value="{{$company->Other}}">
                             @error('Other')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <button type="submit" class="mt-3 btn btn-primary">Submit</button>
+                        <div>
+                            <button type="submit" class="mt-3 btn btn-primary">Submit</button>
+                        </div> 
                     </div>
+                    
                 </div>
             </form>
         </div>

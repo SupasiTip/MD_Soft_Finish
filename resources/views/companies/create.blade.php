@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M.D._Soft Create Data</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
 </head>
 <body>
     
@@ -43,7 +44,7 @@
                     <div class="col-md-12">
                         <div class="form-group my-3">
                             <strong>Name*</strong>
-                            <input type="text" name="name" class="form-control" placeholder="name" required>
+                            <input type="text" name="name" class="form-control" placeholder="name">
                             @error('name')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -53,7 +54,7 @@
                     <div class="col-md-12">
                         <div class="form-group my-3">
                             <strong>Lastname*</strong>
-                            <input type="text" name="lastName" class="form-control" placeholder="lastName" required>
+                            <input type="text" name="lastName" class="form-control" placeholder="lastName" >
                             @error('lastName')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -104,18 +105,19 @@
 
                     <div class="col-md-12">
                         <div class="form-group my-3">
-                            <strong>Company Other</strong>
+                            <strong>Other</strong>
                             <input type="text" name="Other" class="form-control" placeholder="Company Other">
                             @error('Other')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                     </div>
-                    <div class="col-md-12">
+                    <div>
                         <button type="submit" class="mt-3 btn btn-primary">Submit</button>
-                    </div>
+                    </div> 
                 </div>
             </form>
+          
         </div>
     </div>
 
